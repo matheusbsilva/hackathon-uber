@@ -1,0 +1,71 @@
+<head>
+  <title>Bora lá</title>
+  <meta name = "viewport" content = "width = device-width, initial-scale = 1">      
+  <link rel = "stylesheet"
+        href = "https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel = "stylesheet"
+        href = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+  <script type = "text/javascript" src = "https://code.jquery.com/jquery-2.1.1.min.js">
+  </script>           
+  <script src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js">
+  </script>             
+  <style>
+    /* The hero image */
+    .hero-image {
+    /* The image used */
+    background-image: url("https://i.imgur.com/Wta3jGA.png");
+
+    /* Set a specific height */
+    height: 50%;
+
+    /* Position and center the image to scale nicely on all screens */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+} 
+  </style>
+</head>
+<!-- <nav> -->
+<!--   <div class="nav-wrapper"> -->
+<!--     <a href="#" class="brand-logo">Logo</a> -->
+<!--     <a href="#" data-activates="menu-mobile" class="button-collapse"> -->
+<!--       <i class="material-icons">menu</i> -->
+<!--     </a> -->
+<!--    <ul class="side-nav" id="menu-mobile"> -->
+<!--       <li><a href="#">Angular</a></li> -->
+<!--       <li><a href="#">Ionic</a></li> -->
+<!--       <li><a href="#">TypeScript</a></li> -->
+<!--       <li><a href="#">Cordova</a></li> -->
+<!--     </ul> -->
+<!--   </div> -->
+<!-- </nav> -->
+<body>
+  <div class="hero-image">
+  </div>
+  <form class="col s12">
+    <div class="row">
+      <div class="input-field col s6">
+        <input value="Alvin" id="first_name2" type="text" class="validate">
+        <label class="active" for="first_name2">First Name</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <input disabled value="I am not editable" id="disabled" type="text" class="validate">
+        <label for="disabled">Disabled</label>
+      </div>
+    </div>
+  </form>
+
+  <div class = "card-panel teal lighten-2"><h3>{{ response }}</h3></div>
+  <a class="waves-effect waves-light btn" href="#">button</a>
+  <a class="waves-effect waves-light btn href=">button</a>
+
+</body>
+
+<script>
+  $(function(){
+    $(".button-collapse").sideNav();
+  });
+</script>

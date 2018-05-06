@@ -18,7 +18,10 @@ def callback(request):
     req_code = request.GET.get('code')
     TOKEN = sp_oauth.get_access_token(req_code)
     if TOKEN:
-        return HttpResponse(content='Login feito com sucesso', status=200)
+        # return HttpResponse(content='Login feito com sucesso', status=200)
+        # return render_to_response(template_name='hack/login.html', context={'response': 'Login feito com sucesso'})
+        return render(request, 'hack/login.html', {'response': 'Login feito com sucesso'})
+
     else:
         return HttpResponse(content='Falha ao fazer o login', status=400)
 
