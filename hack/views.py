@@ -30,3 +30,11 @@ def redirect_url(request):
     auth_url = sp_oauth.get_authorize_url()
 
     return redirect(auth_url)
+
+
+def home(request):
+    return render(request, 'hack/home.html')
+
+
+def search(request):
+    return render(request, 'hack/searchdestiny.html')

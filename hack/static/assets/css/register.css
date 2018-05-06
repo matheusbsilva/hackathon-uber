@@ -1,0 +1,33 @@
+.page-header {
+    background-color: transparent;
+    background-position: center center;
+  
+}
+.ou {
+    text-align: center;
+
+}
+
+.card-register {
+    background-color: #fff;
+}
+
+.card-register .title {
+    color: #5C2D90;
+}
+
+label {
+    color: #5C2D90;
+}
+input.form-control {
+    color: #F0F0F1;
+}
+
+.register-form .form-control {
+    border: 1px solid #F0F0F1 !important;
+}
+
+.btn-outline-danger {
+    border-color: #5C2D90;
+    color: #5C2D90;
+}

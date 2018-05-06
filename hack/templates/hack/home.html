@@ -1,0 +1,85 @@
+{% load staticfiles %}
+<!doctype html>
+
+<head>
+  <title>Bora lá</title>
+  <meta name = "viewport" content = "width = device-width, initial-scale = 1">
+  <link rel = "stylesheet"
+        href = "https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel = "stylesheet"
+        href = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+  <script type = "text/javascript" src = "https://code.jquery.com/jquery-2.1.1.min.js">
+  </script>
+  <script src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js">
+  </script>
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<meta name="viewport" content="width=device-width" />
+
+<!-- Bootstrap core CSS     -->
+<link href="{% static 'assets/css/bootstrap.min.css' %}" rel="stylesheet" />
+<link href="{% static 'assets/css/paper-kit.css?v=2.1.0' %}" rel="stylesheet" />
+
+<!--     Fonts and icons     -->
+<link href='http://fonts.googleapis.com/css?family=Montserrat:400,300,700' rel='stylesheet' type='text/css'>
+<link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+<link href="{% static 'assets/css/nucleo-icons.css' %}" rel="stylesheet">
+
+<link rel="stylesheet" href="{% static 'assets/css/register.css' %}">
+
+<style>
+.nav {
+  background-color: #f0f0f1 !important;
+}
+
+</style>
+</head>
+ <nav style="background-color: #f0f0f1"  >
+   <div class="nav-wrapper"  >
+     <a href="#" data-activates="menu-mobile" class="button-collapse">
+       <i class="material-icons" style="color:#000000">menu</i>
+     </a>
+    <ul class="side-nav" id="menu-mobile">
+       <li><a href="#">Angular</a></li>
+       <li><a href="#">Ionic</a></li>
+       <li><a href="#">TypeScript</a></li>
+       <li><a href="#">Cordova</a></li>
+     </ul>
+   </div>
+ </nav>
+
+<body background="https://protoio.s3.amazonaws.com/naiaracamelo-656451-proto/projects/3f88d19d-d58f-4e9a-961f-0a852f723a1b/assets/root/7d7267f4cbfc8adf8085c44d794ebcb5.png?AWSAccessKeyId=AKIAIK3DUR7RE5WBTUXA&Expires=1525600902&Signature=%2B7nw6ITHFciC9iz4jNq7LGRkvc0%3D&response-cache-control=max-age%3D1296000&ts=1525577363">
+<!-- <div class="hero-image">
+</div> -->
+<center>
+  <br><br>
+
+  <div class="circle">
+    <img src="https://i.imgur.com/eD5WVdl.png" width="200px">
+  </div>
+  <br>
+  <h3>Maria Josefina</h3>
+  <br><br>
+
+  <form class="col">
+
+  <div class="row">
+   <div class="col s4"><a href="#" style="background:#4F80E1; height: 80px; padding-top:30px;" target="_blank" class="waves-effect btn">Oferecer carona</a></div>
+   <div class="col s4"><a href="{% url 'hack:search' %}" style="background:#705299; height: 80px; padding-top:30px;" target="_blank" class="waves-effect btn">Procurar carona</a></div>
+  </div>
+
+
+
+
+   </form>
+
+
+
+</center>
+
+</body>
+
+<script>
+$(function(){
+  $(".button-collapse").sideNav();
+});
+</script>

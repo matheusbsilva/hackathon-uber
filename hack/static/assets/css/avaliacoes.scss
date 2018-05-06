@@ -1,0 +1,112 @@
+@import "bourbon/bourbon";
+
+$ptsans: "PT Sans", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+$placeholder: #ced2db;
+$text-color: #555f77;
+$links: #0095ff;
+
+html, body {
+  background-color: #f0f2fa;
+  font-family: $ptsans;
+  color: $text-color;
+  -webkit-font-smoothing: antialiased;
+}
+
+input, textarea {
+  outline: none;
+  border: none;
+  display: block;
+	margin: 0;
+	padding: 0;
+	-webkit-font-smoothing: antialiased;
+	font-family: $ptsans;
+	font-size: rem(16);
+  color: $text-color;
+  @include placeholder {
+		color: $placeholder;
+	}
+}
+
+p {
+  line-height: rem(21);
+}
+
+.comments {
+  margin: rem(40) auto 0;
+  max-width: rem(972);
+  padding: 0 rem(20);
+}
+
+.comment-wrap {
+  margin-bottom: rem(20);
+  display: table;
+  width: 100%;
+  min-height: rem(85);
+}
+
+.photo {
+  //background-color: #ff6666;
+  padding-top: rem(10);
+  display: table-cell;
+  width: rem(56);
+  
+  .avatar {
+    @include size(rem(36));
+    //background-color: #0094ff;
+    border-radius: 50%;
+    background-size: contain;
+  }
+}
+
+.comment-block {
+  padding: rem(16);
+  background-color: #fff;
+  display: table-cell;
+  vertical-align: top;
+  border-radius: rem(3);
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,0.08);
+  
+  textarea {
+    width: 100%;
+		resize: none;
+  }
+}
+
+.comment-text {
+  margin-bottom: rem(20);
+}
+
+.bottom-comment {
+  color: #acb4c2;
+  font-size: rem(14);
+}
+
+.comment-date {
+  float: left;
+}
+
+.comment-actions {
+  float: right;
+  
+  li {
+    display: inline;
+		margin: -2px;
+		cursor: pointer;
+    
+    &.complain {
+      padding-right: rem(12);
+      border-right: 1px solid #e1e5eb;
+    }
+    
+    &.reply {
+      padding-left: rem(12);
+			padding-right: rem(2);
+    }
+		
+		&:hover {
+      color: $links;
+			//text-decoration: underline;
+    }
+  }
+}
+

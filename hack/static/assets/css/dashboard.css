@@ -1,0 +1,144 @@
+@media (min-width: 992px){
+    .typo-line{
+        padding-left: 140px;
+        margin-bottom: 40px;
+        position: relative;
+    }
+
+    .typo-line .category{
+        transform: translateY(-50%);
+        top: 50%;
+        left: 0px;
+        position: absolute;
+    }
+}
+
+.icon-section {
+	margin: 0 0 3em;
+	clear: both;
+	overflow: hidden;
+}
+.icon-container {
+	width: 240px;
+	padding: .7em 0;
+	float: left;
+	position: relative;
+	text-align: left;
+}
+.icon-container [class^="ti-"],
+.icon-container [class*=" ti-"] {
+	color: #000;
+	position: absolute;
+	margin-top: 3px;
+	transition: .3s;
+}
+.icon-container:hover [class^="ti-"],
+.icon-container:hover [class*=" ti-"] {
+	font-size: 2.2em;
+	margin-top: -5px;
+}
+.icon-container:hover .icon-name {
+	color: #000;
+}
+.icon-name {
+	color: #aaa;
+	margin-left: 35px;
+	font-size: .8em;
+	transition: .3s;
+}
+.icon-container:hover .icon-name {
+	margin-left: 45px;
+}
+
+.places-buttons .btn{
+    margin-bottom: 30px
+}
+.sidebar .nav > li.active-pro{
+    position: absolute;
+    width: 100%;
+    bottom: 10px;
+}
+.sidebar .nav > li.active-pro a{
+    background: rgba(255, 255, 255, 0.14);
+    opacity: 1;
+    color: #FFFFFF;
+}
+
+.table-upgrade td:nth-child(2),
+.table-upgrade td:nth-child(3){
+    text-align: center;
+}
+img {
+	height: 200px;
+	margin-left: 30px;
+}
+h2 {
+	margin-left: 20px;
+}
+
+.ct-series-b .ct-slice-pie, .ct-series-b .ct-area {
+    fill: rgb(143, 78, 218);
+}
+
+.chart-legend .text-warning, .chart-legend .text-warning:hover {
+    color: rgb(143, 78, 218);
+}
+
+.ct-series-b .ct-point, .ct-series-b .ct-line, .ct-series-b .ct-bar, .ct-series-b .ct-slice-donut {
+    stroke: rgb(143, 78, 218);
+}
+.chart-legend .text-info, .chart-legend .text-info:hover {
+    color: #f16d2f;
+}
+
+.ct-series-a .ct-slice-pie, .ct-series-a .ct-area {
+    fill: #f16d2f;
+}
+
+.ct-series-a .ct-point, .ct-series-a .ct-line, .ct-series-a .ct-bar, .ct-series-a .ct-slice-donut {
+    stroke: #f16d2f;
+}
+
+.btn-danger {
+    border-color: #5C2D90;
+    color: #5C2D90;
+}
+
+.btn-lg {
+	width: 100%;
+}
+
+.location {
+	margin-left: 5px;
+	font-size: 18px;
+	text-align: center;
+}
+a {
+	color: #5C2D90;
+}
+
+.marker-container {
+	text-align: center;
+	width: 100%;
+}
+
+.logotipo {
+	height: 70px;
+	margin-left: 0;
+}
+
+.img-responsive {
+	display: inline-flex;
+    max-width: 100%;
+    height: 300px;
+}
+
+.modal-header .close {
+    margin-top: -20px;
+}
+
+.title {
+	font-size: 30px;
+	float: left;
+	margin-left: 10px;
+}

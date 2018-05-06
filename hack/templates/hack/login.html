@@ -1,31 +1,52 @@
+{% load staticfiles %}
+<!doctype html>
+
 <head>
   <title>Bora lá</title>
-  <meta name = "viewport" content = "width = device-width, initial-scale = 1">      
+  <meta name = "viewport" content = "width = device-width, initial-scale = 1">
   <link rel = "stylesheet"
         href = "https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel = "stylesheet"
         href = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
   <script type = "text/javascript" src = "https://code.jquery.com/jquery-2.1.1.min.js">
-  </script>           
+  </script>
   <script src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js">
-  </script>             
-  <style>
-    /* The hero image */
-    .hero-image {
-    /* The image used */
-    background-image: url("https://i.imgur.com/Wta3jGA.png");
+  </script>
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<meta name="viewport" content="width=device-width" />
 
-    /* Set a specific height */
-    height: 50%;
+<!-- Bootstrap core CSS     -->
+<link href="{% static 'assets/css/bootstrap.min.css' %}" rel="stylesheet" />
+<link href="{% static 'assets/css/paper-kit.css?v=2.1.0' %}" rel="stylesheet" />
 
-    /* Position and center the image to scale nicely on all screens */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-} 
-  </style>
-</head>
+<!--     Fonts and icons     -->
+<link href='http://fonts.googleapis.com/css?family=Montserrat:400,300,700' rel='stylesheet' type='text/css'>
+<link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+<link href="{% static 'assets/css/nucleo-icons.css' %}" rel="stylesheet">
+
+<link rel="stylesheet" href="{% static 'assets/css/register.css' %}">
+<style>
+
+.col .btn{
+  background-color: #1972DE
+}
+.btn:hover {
+  background-color: #FFFFFF
+}
+
+.spot .forgot .btn:focus {
+  background-color: #4dd0e1
+}
+/*.btn{
+  background-color: #1972DE
+}
+.btn:hover {
+  background-color: #FFFFFF
+}*/
+
+
+</style>
+  </head>
 <!-- <nav> -->
 <!--   <div class="nav-wrapper"> -->
 <!--     <a href="#" class="brand-logo">Logo</a> -->
@@ -41,26 +62,43 @@
 <!--   </div> -->
 <!-- </nav> -->
 <body>
-  <div class="hero-image">
-  </div>
-  <form class="col s12">
+  <!-- <div class="hero-image">
+  </div> -->
+  <center>
+    <img src="https://i.imgur.com/Wta3jGA.png" width="200px" align="middle">
+
+   <form class="col">
+    <div class="row">
+        <div class="input-field col s6">
+          <input value="" id="first_name2" type="text" class="validate">
+          <label class="active" for="first_name2">Nome</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s6">
+          <input value="" id="first_name2" type="text" class="validate">
+          <label class="active" for="first_name2">Senha</label>
+        </div>
+      </div>
     <div class="row">
       <div class="input-field col s6">
-        <input value="Alvin" id="first_name2" type="text" class="validate">
-        <label class="active" for="first_name2">First Name</label>
+        <input value="" id="first_name2" type="text" class="validate">
+        <label class="active" for="first_name2">Nome</label>
       </div>
     </div>
-    <div class="row">
-      <div class="input-field col s12">
-        <input disabled value="I am not editable" id="disabled" type="text" class="validate">
-        <label for="disabled">Disabled</label>
-      </div>
-    </div>
+    <a href="#" target="_blank" class="waves-effect btn">Cadastrar</a>
   </form>
 
-  <div class = "card-panel teal lighten-2"><h3>{{ response }}</h3></div>
-  <a class="waves-effect waves-light btn" href="#">button</a>
-  <a class="waves-effect waves-light btn href=">button</a>
+</br>
+<form class="spot">
+  <div class="forgot">
+      <a class="waves-effect waves-light btn">Login com Spotify</a>
+      <!-- <a href="#" class="btn btn-link btn-danger">Login com Spotify</a>-->
+  </div>
+</form>
+
+
+  </center>
 
 </body>
 

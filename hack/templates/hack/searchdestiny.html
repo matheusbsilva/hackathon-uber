@@ -1,0 +1,83 @@
+{% load staticfiles %}
+<!doctype html>
+
+<head>
+  <title>Bora lá</title>
+  <meta name = "viewport" content = "width = device-width, initial-scale = 1">
+  <link rel = "stylesheet"
+        href = "https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel = "stylesheet"
+        href = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+  <script type = "text/javascript" src = "https://code.jquery.com/jquery-2.1.1.min.js">
+  </script>
+  <script src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js">
+  </script>
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<meta name="viewport" content="width=device-width" />
+
+<!-- Bootstrap core CSS     -->
+<link href="{% static 'assets/css/bootstrap.min.css' %}" rel="stylesheet" />
+<link href="{% static 'assets/css/paper-kit.css?v=2.1.0' %}" rel="stylesheet" />
+
+<!--     Fonts and icons     -->
+<link href='http://fonts.googleapis.com/css?family=Montserrat:400,300,700' rel='stylesheet' type='text/css'>
+<link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+<link href="{% static 'assets/css/nucleo-icons.css' %}" rel="stylesheet">
+
+<link rel="stylesheet" href="{% static 'assets/css/register.css' %}">
+
+<style>
+.nav {
+  background-color: #f0f0f1 !important;
+}
+
+</style>
+</head>
+
+<nav style="background-color:#30CA95; opacity:0.81"  >
+  <div class="nav-wrapper"  >
+    <a href="#" data-activates="menu-mobile" class="button-collapse">
+      <i class="material-icons" style="color:#fff">menu</i>
+    </a>
+   <ul class="side-nav" id="menu-mobile">
+      <li><a href="#">Angular</a></li>
+      <li><a href="#">Ionic</a></li>
+      <li><a href="#">TypeScript</a></li>
+      <li><a href="#">Cordova</a></li>
+    </ul>
+  </div>
+</nav>
+
+<body background="https://protoio.s3.amazonaws.com/naiaracamelo-656451-proto/projects/3f88d19d-d58f-4e9a-961f-0a852f723a1b/assets/root/7d7267f4cbfc8adf8085c44d794ebcb5.png?AWSAccessKeyId=AKIAIK3DUR7RE5WBTUXA&Expires=1525600902&Signature=%2B7nw6ITHFciC9iz4jNq7LGRkvc0%3D&response-cache-control=max-age%3D1296000&ts=1525577363">
+<!-- <div class="hero-image">
+</div> -->
+<center>
+ <br><br>
+
+
+
+
+
+    <form class="col s1">
+      <!-- <div class="row">
+        <div class="input-field col s12">
+          <textarea id="textarea1" class="materialize-textarea"></textarea>
+          <label for="textarea1">Qual destino?</label>
+        </div>
+      </div> -->
+
+      <div class="input-field">
+        <input id="search" type="search" style="border-radius:10px;" >
+        <label class="label-icon" for="search"><i class="material-icons">search</i>  Qual destino?</label>
+        <i class="material-icons">close</i>
+      </div>
+    </form>
+
+
+
+
+
+
+</center>
+
+</body>

@@ -1,0 +1,389 @@
+$color-bg: #fde3a7;
+$book-color-bg: lighten($color-bg, 20%);
+$book-color-border: lighten(#000, 85%);
+$book-border: 1px solid $book-color-border;
+
+%book-rounded-corners {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+@font-face {
+	font-family: 'OpenSans';
+	src: url("../fonts/Open_Sans/OpenSans-Regular.ttf");
+	font-size: 1em;
+}
+
+@font-face {
+	font-family: 'OpenSans-Light';
+	src: url("../fonts/Open_Sans/OpenSans-Light.ttf");
+	font-size: 1em;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Material+Icons');
+
+body {
+	width: 100vw;
+	height: 100vh;
+	background: linear-gradient(135deg, #D080FF, #FFAA00);
+}
+
+a {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+#logotipo {
+	position: absolute;
+	top: -55px;
+	height: 250px;
+	margin-left: -80px;
+}
+
+li.search {
+	display: inline;
+}
+.search input {
+	background-color: transparent;
+	color: #fff;
+	border: none;
+	height: 30px;
+	line-height: 30px;
+	padding-left: 8px;
+	left: 130px;
+	position: relative;
+	width: 470px;
+	top: 15px;
+}
+
+.search ::-webkit-input-placeholder {
+	color: #fff;	
+	text-transform: uppercase;
+	font-weight: 600;
+	font-size: 12px;
+}
+
+.search button {
+	background: none;
+	border: none;
+	position: absolute;
+    right: 330px;
+    top: 22px;
+}
+.search button i {
+	font-size: 14px;
+	color: #fff;
+}
+
+#search {
+	display: none;
+}
+.search .input-group {
+	top: -7px;
+}
+
+#menu li.notifications button {
+	background: none;
+	border: none;
+	position: absolute;
+    right: 100px;
+    top: -13px;
+}
+li.notifications button i {
+	font-size: 30px;
+	color: rgba(255, 255, 255, .8);
+}
+li.search .input-group {
+	top: 8px;
+}
+
+#menu li.dropdown button {
+	background: none;
+	border: none;
+	position: absolute;
+    right: 41px;
+    top: -22px;
+}
+#menu li.dropdown button i {
+	font-size: 30px;
+	color: rgba(255, 255, 255, .8);
+}
+#menu li.user .input-group {
+	top: 8px;
+}
+
+
+#menu li.dropdown ul {
+	display: inline-block;
+	font-family: "OpenSans";
+}
+#menu li.dropdown ul li{
+	display: inline-block;
+	font-family: "OpenSans";
+}
+
+#menu li.dropdown ul li i{
+	font-size: 30px;
+	color: rgba(0, 0, 0, .8);
+}
+
+
+
+
+#menu li.out button {
+	background: none;
+	border: none;
+	position: absolute;
+    right: -17px;
+    top: -14px;
+}
+#menu li.out button i {
+	font-size: 30px;
+	color: rgba(255, 255, 255, .8);
+}
+
+
+
+
+
+
+
+
+
+
+
+#banner {
+	width:100% ;
+	height: 728px; 
+	position: relative;
+	background: url("../img/banner.jpg") no-repeat;
+	background-position: 0px -100px;
+	top: -130px;
+}
+
+#banner h1 {
+	color: #fff;
+	top: 350px;
+	position: relative;
+	font-size: 36px;
+	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.45);
+	margin-left: 50px;
+	text-transform: uppercase;
+	font-weight: 600;
+}
+
+#banner h1 small{
+	font-size: 32px;
+	display: block;
+	color: #fff;
+	font-family: 'OpenSans';
+	font-weight: bold;
+}
+
+#news {
+	position: relative;
+	top: -110px;
+}
+
+#news h2 {
+	color: #5E2799;
+	font-family: 'OpenSans-Light';
+	font-size: 48px;
+	text-transform: uppercase;
+	text-align: center;
+
+}
+
+#news hr {
+	border: #FDE192 solid 2px;
+	width: 200px;
+	margin: 0 auto;
+}
+
+#news .thumbnails {
+	margin-top: 20px;
+}
+
+#news .thumbnails h3 {
+	color: #5E299A;
+	font-size: 18px;
+	font-family: 'OpenSans';
+	font-weight: bold;
+	margin-bottom: 0px;
+}
+
+#news .thumbnails time {
+	color: #A7A7A7;
+	font-size: 18px;
+	font-family: 'OpenSans';
+}
+
+@media (min-width: 768px) and (max-width: 991px){
+	.navbar.navbar-transparent {
+		padding-top: 35px;
+		margin-top: -35px;
+	}
+
+	.navbar .navbar-brand {
+		margin: 0px;
+		padding: 0px;
+	}
+	#logotipo {
+		height: 200px;
+		top: -30px;
+		left: 10px;
+		position: absolute;
+	}
+	li.search {
+		display: none;
+	}
+	#search {
+		display: inline;
+	}
+	#search ::-webkit-input-placeholder {
+		color: #9A9A9A !important;
+		text-transform: uppercase;
+		font-weight: 600;
+		font-size: 12px;
+	}
+	#search input {
+		width: 170px;
+		border-radius: 7px;
+		border: none;
+		line-height: 30px;
+		background-color: #FFFCF5;
+		margin-left: 20px;
+	}
+	#search button {
+		background: none;
+		border: none;
+		position: relative;
+		left: calc(100% - 230px);
+	}
+	#search button i {
+		font-size: 14px;
+		color: #9A9A9A;
+	}
+}
+
+@media (min-width: 320px) and (max-width: 767px){
+	.navbar.navbar-transparent {
+		padding-top: 35px;
+		margin-top: -35px;
+	}
+
+	.navbar .navbar-brand {
+		margin: 0px;
+		padding: 0px;
+	}
+	#logotipo {
+		height: 150px;
+		top: -35px;
+		left: 20px;
+		position: absolute;
+	}
+	li.search {
+		display: none;
+	}
+	#search {
+		display: inline;
+	}
+	#search ::-webkit-input-placeholder {
+		color: #9A9A9A !important;
+		text-transform: uppercase;
+		font-weight: 600;
+		font-size: 12px;
+	}
+	#search input {
+		width: 170px;
+		border-radius: 7px;
+		border: none;
+		line-height: 30px;
+		background-color: #FFFCF5;
+		margin-left: 20px;
+	}
+	#search button {
+		background: none;
+		border: none;
+		position: absolute;
+		left: calc(100% - 200px);
+		top: 5px;
+	}
+	#search button i {
+		font-size: 14px;
+		color: #9A9A9A;
+	}
+}
+// LOL CSS
+
+ul {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.list-inline {
+  padding-left: 0;
+  list-style: none;
+
+  > li {
+    display: inline-block;
+    margin-left: 2em;
+  }
+
+  > li:first-child {
+    margin-left: 0;
+  }
+}
+
+.book {
+  @extend %book-rounded-corners;
+
+  cursor: pointer;
+  display: block;
+  width: 150px;
+  height: 220px;
+  position: relative;
+  background: $book-color-bg; 
+  z-index: 1;
+  box-shadow: 0 2px 4px 0 rgba(#000, .1), 0 9px 20px 0 rgba(#000, .25);
+  overflow: hidden;
+  transition: box-shadow .3s linear;
+}
+
+.book img {
+  @extend %book-rounded-corners;
+
+  width: inherit;
+  height: inherit;
+  transform-origin: 0 50%;
+  transform: rotateY(0);
+  transition: all .45s ease;
+}
+
+.book:hover {
+  box-shadow: 0 2px 4px 0 rgba(#000, .25), 0 9px 20px 0 rgba(#000, .45);
+
+  img {
+    transform: rotateY(-25deg);
+    box-shadow: 1px 1px 5px 5px rgba(#000, .2);
+  }
+}
+
+.book::after,
+.book::before {
+  @extend %book-rounded-corners;
+
+  content: '';
+  display: block;
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  background: $book-color-bg;
+  border: $book-border;
+}
+
+.book::before { left: -3px; }
+.book::after { left: -6px; }
+
