@@ -63,6 +63,10 @@ def redirect_url(request):
     return redirect(auth_url)
 
 
+def loading(request):
+    return render(request, 'hack/loading.html')
+
+
 def home(request):
     return render(request, 'hack/home.html')
 
@@ -115,4 +119,3 @@ def get_matches(request):
         users.append(sp.user(obj['userid']))
 
     return render(request, template_name='matches.html', context=users)
-
