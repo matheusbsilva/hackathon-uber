@@ -10,7 +10,7 @@ from sklearn.neighbors import NearestNeighbors
 
 CLIENT_ID = 'bb101bf3987840f79cdc0c11a819b8c5'
 CLIENT_SECRET = '2acb736cc399427382570f1e47996c48'
-redirect_uri = 'http://localhost:8000'
+redirect_uri = 'http://localhost:8000/home'
 scope = 'user-top-read'
 TOKEN = {}
 DATA = {}
@@ -22,8 +22,12 @@ collection = mongo_db['collection']
 sp_oauth = oauth2.SpotifyOAuth(CLIENT_ID, CLIENT_SECRET, redirect_uri, scope=scope)
 
 
-def save_info(token):
-    sp = spotipy.Spotify(auth=token['access_token'])
+def login(request):
+    return render(request, 'hack/login.html')
+
+
+def save_info():
+    sp = spotipy.Spotify(auth=TOKEN['access_token'])
     results = sp.current_user_top_artists(42)
     aux = pd.DataFrame()
 
@@ -33,28 +37,24 @@ def save_info(token):
     aux = aux.drop_duplicates(['genero']).reset_index(drop=True)
 
     current_user = sp.current_user()
-    import ipdb;ipdb.set_trace()
-
+    global DATA
     DATA = {
-            'userid': current_user['id'],
+            'id': current_user['id'],
             'generos': aux['genero'].tolist()
 
     }
+    if collection.find({'id': DATA['id']}).count() == 0:
+        collection.insert(DATA)
 
-    collection.insert(DATA)
+    return DATA
 
 
-def callback(request):
+def get_token(request):
+    global TOKEN
     req_code = request.GET.get('code')
-    token = sp_oauth.get_access_token(req_code)
-    if token['access_token']:
-        # return HttpResponse(content='Login feito com sucesso', status=200)
-        # return render_to_response(template_name='hack/login.html', context={'response': 'Login feito com sucesso'})
-        save_info(token)
-        return render(request, 'hack/login.html', {'response': 'Login feito com sucesso'})
+    TOKEN = sp_oauth.get_access_token(req_code)
 
-    else:
-        return HttpResponse(content='Falha ao fazer o login', status=400)
+    return TOKEN
 
 
 def redirect_url(request):
@@ -68,6 +68,8 @@ def loading(request):
 
 
 def home(request):
+    get_token(request)
+    save_info()
     return render(request, 'hack/home.html')
 
 
@@ -90,32 +92,35 @@ def search_knn_index(indexes=[]):
 def get_my_index(user_id=None, user_email=None):
     op = df_comp()
     if user_id:
-        response = op[op['userid'] == user_id].index[0]
+        response = op[op['id'] == user_id].index[0]
     elif user_email:
         response = op[op['email'] == user_email].index[0]
     else:
-        response = 'Passe um email ou userid'
+        response = 'Passe um email ou id'
 
     return response
 
 
 def create_matrix():
     op = df_comp()
-    x = op.drop(['_id', 'generos', 'userid'], axis=1)
-    knn = NearestNeighbors(n_neighbors=3)
+    x = op.drop(['_id','generos','id'], axis=1)
+    knn = NearestNeighbors(n_neighbors=4)
     knn.fit(x)
     arr = knn.kneighbors(x, return_distance=False)
-    matches = search_knn_index(arr[get_my_index(user_id=DATA['userid'])]).to_dict(orient='records')
+    matches = search_knn_index(arr[get_my_index(user_id=DATA['id'])]).to_dict(orient='records')
 
     return matches
 
 
 def get_matches(request):
     matches = create_matrix()
-    sp = spotipy.Spotify(auth=TOKEN)
+    sp = spotipy.Spotify(auth=TOKEN['access_token'])
     users = []
 
     for obj in matches:
-        users.append(sp.user(obj['userid']))
+        if obj['id'] == DATA['id']:
+            continue
+        users.append(sp.user(obj['id']))
 
-    return render(request, template_name='matches.html', context=users)
+    return render(request, template_name='hack/matches.html', context={'users': users})
+
