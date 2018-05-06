@@ -11,8 +11,10 @@ Django==2.0.5
 Eve==0.7.8
 Events==0.2.2
 fake-useragent==0.1.10
+flake8==3.5.0
 Flask==0.12
 Flask-PyMongo==0.5.1
+greenlet==0.4.13
 idna==2.6
 ipdb==0.11
 ipython==6.3.1
@@ -22,6 +24,9 @@ jedi==0.12.0
 Jinja2==2.10
 lxml==4.2.1
 MarkupSafe==0.23
+mccabe==0.6.1
+msgpack==0.5.6
+neovim==0.2.6
 numpy==1.14.3
 pandas==0.22.0
 parse==1.8.2
@@ -30,7 +35,9 @@ pexpect==4.5.0
 pickleshare==0.7.4
 prompt-toolkit==1.0.15
 ptyprocess==0.5.2
+pycodestyle==2.3.1
 pyee==5.0.0
+pyflakes==1.6.0
 Pygments==2.2.0
 pymongo==3.6.1
 pyppeteer==0.0.17
@@ -40,6 +47,7 @@ pytz==2018.4
 requests==2.18.4
 requests-html==0.9.0
 scikit-learn==0.19.1
+scipy==1.1.0
 simplegeneric==0.8.1
 simplejson==3.14.0
 six==1.11.0
